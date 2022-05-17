@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Test1.Views.Course_Assessment">
+
+
+
+
+    <ContentPage.Content>
+
+
+
+
+
+
+
+
+
+        
+
+        <ScrollView>
+<StackLayout>
+     
+    <Button Text="Click Here to Add Assessments" BorderWidth="3" BorderColor="DarkGray" Clicked="Button_Clicked"/>
+    <Label Text="Pull To See Changes Assessments" TextColor="Black" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
+ 
+          
+
+              <ListView x:Name="AView"  
+             HasUnevenRows="True"
+                        IsPullToRefreshEnabled="True"
+                        ItemTapped="AView_ItemTapped">  
+       <ListView.ItemTemplate>  
+           <DataTemplate>  
+               <ViewCell>
+                   <Frame BorderColor="Gray"
+       CornerRadius="0"
+                          Margin="10"
+       Padding="20" BackgroundColor="LightBlue" >
+                   <StackLayout Orientation="Vertical"   >
+                     
+                    
+
+                       <Label Text="{Binding tname}" FontAttributes="Bold" HorizontalTextAlignment="Center" />
+                      <Label Text="{Binding ttype}"  HorizontalTextAlignment="Center" />
+                    
+                                        <Label Text="{Binding notificationaccess}" HorizontalTextAlignment="Center" FontAttributes="Bold" />
+                                        <Label Text="{Binding tduedate, StringFormat='{}{0:MM/dd/yyyy}'}" HorizontalTextAlignment="Center" />
+
+                                        <Label Text="{Binding tdescription}" HorizontalTextAlignment="Center" />
+
+
+                                    </StackLayout>
+                       </Frame>
+               </ViewCell>  
+           </DataTemplate>  
+       </ListView.ItemTemplate>  
+   </ListView> 
+
+
+
+
+</StackLayout>
+
+
+
+</ScrollView>
+
+
+
+    </ContentPage.Content>
+</ContentPage>

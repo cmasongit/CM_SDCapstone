@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Test1.Views.TermInfo">
+
+    <ContentPage.ToolbarItems>
+    <ToolbarItem Text="Add" Clicked="ToolbarItem_Clicked"/>
+        
+    </ContentPage.ToolbarItems>
+
+
+
+    <ContentPage.Content>
+
+   
+
+
+
+        <StackLayout>
+
+<Label Text="Pull Down to Refresh" TextColor="DarkGoldenrod"  FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+
+<Label x:Name="apple1" HorizontalOptions="Center" FontSize="30" TextColor="Black"/>
+
+
+
+
+
+
+              <ListView x:Name="MainCourseView"  
+             HasUnevenRows="True"
+               IsPullToRefreshEnabled="True"
+            
+                        SelectionMode="Single"
+           ItemTapped="MainCourseView_ItemTapped" >  
+       <ListView.ItemTemplate>  
+           <DataTemplate>  
+               <ViewCell>
+                   <Frame BorderColor="Gray"
+       CornerRadius="0"
+                          Margin="10"
+       Padding="20" BackgroundColor="LightGray" >
+                   <StackLayout Orientation="Vertical"   >
+
+
+
+                                    <Label Text="{Binding coursetitle1}" FontAttributes="Bold" HorizontalTextAlignment="Center" />
+                                    
+                                    <Label Text="{Binding startdatestring}"/>
+                                
+                                    <Label Text="{Binding enddatestring}"/>
+<Label Text="{Binding instructorname1}" />
+                                    <Label Text="{Binding instructorphone, StringFormat='{}{0:(###) ###-####}'}" />
+                       <Label Text="{Binding instructoremail1}" />
+                       <Label Text="{Binding status1}" FontAttributes="Bold" />
+                                    <Label Text="{Binding termname}" />
+                                    <Label Text="{Binding cn1}" FontAttributes="Bold" />
+
+                                    <BoxView Color="LightBlue" HeightRequest="2"/>
+
+                                </StackLayout>
+                       </Frame>
+               </ViewCell>  
+           </DataTemplate>  
+       </ListView.ItemTemplate>  
+   </ListView> 
+
+
+
+
+        </StackLayout>
+
+
+    </ContentPage.Content>
+</ContentPage>

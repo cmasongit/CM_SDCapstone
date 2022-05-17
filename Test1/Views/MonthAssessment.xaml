@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Test1.Views.MonthAssessment">
+    <ContentPage.Content>
+
+
+
+
+
+
+
+
+
+
+        <StackLayout>
+
+         
+            
+            
+      
+            <Label Text="Report Results" FontSize="Large" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+
+
+            <Label x:Name="titlehead" HorizontalTextAlignment="Center" FontSize="Subtitle"/>
+
+            <Label x:Name="numcou" HorizontalTextAlignment="Center" FontSize="Subtitle"/>
+
+            <ListView x:Name="MainCourseView3"  
+             HasUnevenRows="True"
+           
+            
+                        SelectionMode="Single"
+     >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame BorderColor="Gray"
+       CornerRadius="0"
+                          Margin="10"
+       Padding="20" BackgroundColor="LightGray" >
+                                <StackLayout Orientation="Vertical"   >
+
+
+                                    <Label Text="{Binding tname}" FontAttributes="Bold" HorizontalTextAlignment="Center" />
+                                    <Label Text="{Binding ttype}"  HorizontalTextAlignment="Center" />
+
+                                    <Label Text="{Binding notificationaccess}" HorizontalTextAlignment="Center" FontAttributes="Bold" />
+                                    <Label Text="{Binding tduedate, StringFormat='{}{0:MM/dd/yyyy}'}" HorizontalTextAlignment="Center" />
+
+                                    <Label Text="{Binding coursename}" HorizontalTextAlignment="Center" />
+
+
+
+
+                                </StackLayout>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+
+
+
+        </StackLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </ContentPage.Content>
+</ContentPage>

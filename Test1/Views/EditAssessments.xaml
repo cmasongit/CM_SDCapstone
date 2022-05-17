@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Test1.Views.EditAssessments">
+    <ContentPage.Content>
+
+
+
+
+<StackLayout>
+
+<Label Text="Edit Assessment Name:"  FontAttributes="Bold" TextColor="DarkBlue"/>
+
+<Entry x:Name="an" Placeholder="Assessment Name" />
+    <Label Text="Edit Description:"  FontAttributes="Bold" TextColor="DarkBlue"/>
+<Entry x:Name="ad"     Placeholder="Description" />
+    <Label Text="Pick Assessment Type:"  FontAttributes="Bold" TextColor="DarkBlue"/>
+<Picker x:Name="TypeA" Title="Assessment Type" />
+    <Label Text="Edit Due Date:"  FontAttributes="Bold" TextColor="DarkBlue"/>
+<DatePicker x:Name="DueDate1"/>
+            <Picker x:Name="Typeh" Title="Would you Like to be Notified?" />
+            <Button Text="Submit" Clicked="Button_Clicked" />
+</StackLayout>
+
+
+
+
+    </ContentPage.Content>
+</ContentPage>

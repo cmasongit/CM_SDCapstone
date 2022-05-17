@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:Test1.ViewModels" xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:Models="clr-namespace:Test1.Models"
+             x:Class="Test1.Views.AboutPage"
+             Title="{Binding Title}" >
+         
+
+             
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Accent">#E5E4E2</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+         
+
+             
+    
+    <ContentPage.BindingContext>
+        <vm:AboutViewModel />
+    </ContentPage.BindingContext>
+
+
+        <ContentPage.ToolbarItems>
+    <ToolbarItem Text="Add Term" Clicked="ToolbarItem_Clicked" />
+       
+    </ContentPage.ToolbarItems>
+
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackLayout  VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                <ContentView Padding="0,0,0,5" VerticalOptions="FillAndExpand">
+                   <Image Source="projectcustom1.png" VerticalOptions="Center" HeightRequest="144"   />
+
+                </ContentView>
+            </StackLayout>
+           
+
+            <StackLayout BackgroundColor="White"> <Label Text="Terms" TextColor="Black" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="Medium"/>
+
+                <BoxView Color="LightBlue" HeightRequest="5"/>
+
+                <Label Text="To Remove, Edit  or View Courses in a Term, tap on a term and answer alerts " HorizontalTextAlignment="Center" />
+                <BoxView Color="LightBlue" HeightRequest="5"/>
+
+                <ListView x:Name="TermView"  ItemTapped="TermView_ItemTapped" SelectionMode="Single" ><ListView.ItemTemplate><DataTemplate>
+
+    
+    
+    <TextCell Text = "{Binding Name}" TextColor="Black" Detail="{Binding datecombo}"/>
+
+                          
+
+
+
+
+                        </DataTemplate></ListView.ItemTemplate>
+	<ListView.SelectedItem>
+		<Models:Terms/>
+	</ListView.SelectedItem>
+</ListView>
+
+
+
+</StackLayout>
+
+
+
+
+        </StackLayout>
+
+
+
+
+
+
+
+
+
+    </Grid>
+
+  
+
+</ContentPage>

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Test1.Views.Reportsmain">
+    <ContentPage.Content>
+        <StackLayout>
+
+
+            <Label Text = "View Assessments by Month"  HorizontalOptions="Center" FontSize="Header" FontAttributes="Bold"/>
+            <Picker x:Name="listmonths" Title="Select Month" />
+
+
+            <Button Text="View Assessments by Month Report" HorizontalOptions="CenterAndExpand"  Clicked="Button_Clicked"/>
+            
+            <BoxView  Color="Beige"   WidthRequest="12" HeightRequest="5"/>
+            
+            <Label Text = "View Courses by Month"  HorizontalOptions="Center" FontSize="Header" FontAttributes="Bold"   />
+            <Label Text="Select one option below:" FontAttributes="Italic"/>
+            <RadioButton x:Name="start"   Content="Start date"  CheckedChanged="RadioButton_CheckedChanged"/>
+            <RadioButton x:Name="end" Content="End date" CheckedChanged="RadioButton_CheckedChanged_1" />
+            <Picker x:Name="listmonths1" Title="Select Month" />
+
+
+            <Button Text="View Courses by Month Report" Clicked="Button_Clicked_1" HorizontalOptions="CenterAndExpand"  />
+
+
+
+            <BoxView  Color="Beige"   WidthRequest="12" HeightRequest="5"/>
+
+            <Label Text ="View Courses by Status" HorizontalOptions="Center" FontSize="Header" FontAttributes="Bold" />
+
+            <Picker x:Name="statuspicker" Title="Select Course Status:"
+        TitleColor="DarkBlue">
+                <Picker.Items>
+                    <x:String>In Progress</x:String>
+                    <x:String>Completed</x:String>
+                    <x:String>Dropped</x:String>
+                    <x:String>Plan to Take</x:String>
+
+
+                </Picker.Items>
+            </Picker>
+            <Button Text="View Courses Statuses Report" Clicked="Button_Clicked_2"  HorizontalOptions="CenterAndExpand" />
+
+
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

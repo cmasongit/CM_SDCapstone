@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Test1.Views.AddAssessments">
+    <ContentPage.Content>
+
+
+
+
+<StackLayout>
+
+    <BoxView Color="Black" HeightRequest="10" WidthRequest="2"/>
+<Label Text="Add Course Assessments:" TextColor="DarkBlue" FontAttributes="Bold" HorizontalOptions="Center"/>
+
+<Entry x:Name="AssessmentTitle" Placeholder="Enter Assessment Title" />
+<Editor x:Name="AssessmentDescription" Placeholder="Enter Assessment Description" />
+<Picker x:Name="AssessmentTy" Title=" Select Assessment Type" />
+            <Picker x:Name="AssessmentNotify" Title=" Would you like to be notified?" />
+            <Label Text="Select Course Due Date:" TextColor="DarkBlue" FontAttributes="Bold" HorizontalOptions="Center"/>
+<DatePicker x:Name="AssessmentDueDate" />
+
+
+
+    <BoxView Color="Black" HeightRequest="10" WidthRequest="5"/>
+<Button x:Name="submitcourse"   Clicked="submitcourse_Clicked"    Text="Submit" BorderColor="Black" BorderWidth="1" BackgroundColor="DarkRed" />
+
+    
+
+
+
+</StackLayout>
+
+
+
+
+
+
+    </ContentPage.Content>
+</ContentPage>

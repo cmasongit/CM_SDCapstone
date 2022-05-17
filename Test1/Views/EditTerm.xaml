@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Test1.Views.EditTerm">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <StackLayout>
+
+
+                <BoxView Color="Black" WidthRequest="10" HeightRequest="3"/>
+
+                <Label Text="Enter a Term Name or Pick a Season and Year" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                <Picker x:Name="Season" />
+                <Picker x:Name="Year" />
+                <Label Text="or" FontAttributes="Bold"  HorizontalTextAlignment="Center"/>
+                <Entry x:Name="TermName"/>
+
+                <BoxView Color="Black" WidthRequest="10" HeightRequest="3"/>
+                <Label Text="Pick Term Start Date" FontAttributes="Bold"  HorizontalTextAlignment="Center"/>
+                <DatePicker x:Name="StartTerm" />
+                <Label Text="Pick Term End Date" FontAttributes="Bold"  HorizontalTextAlignment="Center"/>
+                <DatePicker x:Name="EndTerm"/>
+
+
+
+                <Button Text="Submit" Clicked="Button_Clicked"/>
+            </StackLayout>
+
+
+
+
+
+
+
+
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Test1.Views.Searchpage">
+    <ContentPage.Content>
+        <StackLayout>
+
+
+
+            
+
+            <BoxView  Color="LightBlue"   WidthRequest="12" HeightRequest="5"/>
+
+            <Label Text="Search to find courses by Course Name, Term Name and Instructor Name." FontSize="Subtitle" FontAttributes="Bold" />
+            <Entry x:Name="entrytext" Placeholder="Enter Text Here:" />
+
+            <Button Text="Search" Clicked="Button_Clicked"/>
+            <BoxView  Color="LightBlue"   WidthRequest="12" HeightRequest="5"/>
+            <BoxView  Color="Beige"   WidthRequest="12" HeightRequest="2"/>
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Test1.Views.ViewCourse">
+    <ContentPage.Content>
+     
+
+<ScrollView>
+
+
+<StackLayout>
+
+    <Label x:Name="CourseName" FontAttributes="Bold" FontSize="Large" HorizontalOptions="FillAndExpand"/>
+                <Label x:Name="CourseTerm"  FontAttributes="Bold" />
+
+                <Label x:Name="CourseStat" FontSize="Medium" 
+        />
+<Label x:Name="Dates2" FontSize="Small"/>
+
+    <Label x:Name="CourseInstructor" />
+    <Label x:Name="Instructnum" />
+      <Label x:Name="Instructemail" />
+<Label Text="Courses Notes:" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="LightSlateGray"/>
+<Editor x:Name="CourseN" IsReadOnly="True" />
+                <Label x:Name="CourseNot"  FontAttributes="Bold" />
+
+                <Button Text="Share Course Notes" Clicked="Button_Clicked"/>
+</StackLayout>
+
+ </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

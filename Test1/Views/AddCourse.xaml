@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Test1.Views.AddCourse">
+
+     
+
+
+
+    <ContentPage.Content>
+      
+<ScrollView> <StackLayout>
+    <BoxView Color="Black" HeightRequest="10" WidthRequest="2"/>
+    <Label Text="Enter Course Name:" TextColor="DarkBlue" FontAttributes="Bold" HorizontalOptions="Center"/>
+<Entry x:Name="Titlecourse" Placeholder="Enter Course Title" />
+
+
+<BoxView Color="Black" HeightRequest="10" WidthRequest="2"/>
+<Label Text="Enter Course Instructor Information:" TextColor="DarkBlue" FontAttributes="Bold" HorizontalOptions="Center"/>
+<Entry x:Name="Teachername" Placeholder="Enter Course Instructor" />
+<Entry x:Name="Teacherphone" Placeholder="Enter Course Instructor Phone" MaxLength="10" Keyboard="Telephone" />
+<Entry x:Name="Teacheremail" Placeholder="Enter Course Instructor email" />
+
+
+    <Picker x:Name="statuspicker" Title="Select Course Status:"
+        TitleColor="DarkBlue">
+  <Picker.Items>
+    <x:String>In Progress</x:String>
+    <x:String>Completed</x:String>
+    <x:String>Dropped</x:String>
+    <x:String>Plan to Take</x:String>
+
+   
+  </Picker.Items>
+</Picker>
+
+  
+<BoxView Color="Black" HeightRequest="10" WidthRequest="2"/>
+<Label Text="Enter Start Date:" TextColor="DarkBlue" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
+<DatePicker x:Name="SDate" Format="D" />
+    
+
+<Label Text="Enter End Date:" TextColor="DarkBlue" HorizontalTextAlignment="Center" FontAttributes="Bold" />
+<DatePicker x:Name="EDate" Format="D"/>
+
+
+                <Picker x:Name="AssessmentNotify2" Title=" Would you like to be notified about this course?" />
+                <BoxView Color="Black" HeightRequest="10" WidthRequest="2"/>
+    <Label Text="Add Course Notes:" TextColor="DarkBlue" FontAttributes="Bold" HorizontalOptions="Center"/>
+<Editor x:Name="CourseN" Placeholder="Add Course Notes"/>
+
+
+
+
+                <BoxView Color="Black" HeightRequest="10" WidthRequest="5"/>
+<Button x:Name="submitcourse" Clicked="submitcourse_Clicked" Text="Submit" BorderColor="Black" BorderWidth="1" BackgroundColor="DarkRed" />
+
+      
+
+</StackLayout>   
+  </ScrollView>
+    
+
+    </ContentPage.Content>
+</ContentPage>

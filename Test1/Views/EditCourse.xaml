@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Test1.Views.EditCourse">
+
+
+    
+      <ContentPage.ToolbarItems>
+    <ToolbarItem Text="Add Assessments"/>
+        <ToolbarItem Text="Edit Assessments"/> 
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <ScrollView> 
+        <StackLayout>
+<BoxView Color="Black" HeightRequest="10" WidthRequest="2"/>
+<Label Text="Enter Course Name:" TextColor="DarkBlue" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
+
+<Entry x:Name="CourseName"/>
+
+
+<BoxView Color="Black" HeightRequest="10" WidthRequest="2"/>
+<Label Text="Course Status:" TextColor="DarkBlue" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
+
+  <Picker x:Name="statuspicker1" Title="Select Course Status"
+        TitleColor="DarkBlue">
+  <Picker.Items>
+      
+    <x:String>In Progress</x:String>
+    <x:String>Completed</x:String>
+    <x:String>Dropped</x:String>
+    <x:String>Plan to Take</x:String>
+
+   
+  </Picker.Items>
+</Picker>
+
+
+<BoxView Color="Black" HeightRequest="10" WidthRequest="2"/>
+<Label Text="Enter Instructor Name:" TextColor="DarkBlue" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
+<Entry x:Name="CourseInstructor" Placeholder="Instructor Name"/>
+
+<BoxView Color="Black" HeightRequest="10" WidthRequest="2"/>
+<Label Text="Enter Instructor phone number:" TextColor="DarkBlue" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
+
+<Entry x:Name="CoursePhone" Placeholder="Instructor Phone" Keyboard="Telephone"  MaxLength="10"/>
+
+            <BoxView Color="Black" HeightRequest="10" WidthRequest="2"/>
+<Label Text="Enter Instructor email:" TextColor="DarkBlue" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
+<Entry x:Name="CourseEmail" Placeholder="Email"/>
+
+
+<BoxView Color="Black" HeightRequest="10" WidthRequest="2"/>
+<Label Text="Enter Start Date:" TextColor="DarkBlue" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
+<DatePicker x:Name="Startdate"/>
+
+<BoxView Color="Black" HeightRequest="10" WidthRequest="2"/>
+<Label Text="Enter End Date:" TextColor="DarkBlue" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
+<DatePicker x:Name="EndDate" />
+
+<BoxView Color="Black" HeightRequest="10" WidthRequest="2"/>
+<Label Text="Enter Course Notes:" TextColor="DarkBlue" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
+
+                <Editor x:Name="CourseN" Completed="Handle_Completed" />
+
+
+
+                <Picker x:Name="statuspicker2" Title="Would you like to be notified?"
+        TitleColor="DarkBlue">
+                    <Picker.Items>
+
+                        <x:String>Yes</x:String>
+                        <x:String>No</x:String>
+                     
+
+                    </Picker.Items>
+                </Picker>
+
+
+
+
+
+
+                <Button Text="Submit"  BackgroundColor="DarkRed" Clicked="Button_Clicked"/>
+
+        </StackLayout>
+
+
+  </ScrollView>
+
+
+    </ContentPage.Content>
+</ContentPage>
